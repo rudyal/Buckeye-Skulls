@@ -1,0 +1,67 @@
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans');
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+//$header-img: image-url('bear-w1600xh1067.jpg', false, false);
+//$header-img: image-url('bear-w1205xh805.jpg', false, false);
+$header-img: image-url('bear-w1205xh704.jpg', false, false);
+//$header-img: image-url('bear-w1000xh704.jpg', false, false);
+//desktop, laptop, tablet, phablet, mobileonly
+
+body {
+	font-family: $font-primary;
+	font-size: 1.2rem;
+	line-height: 160%;
+	//background: $paleyellow;
+	//color: $darkblue;
+	// image-url arguments:
+	// $path: path relative to images directory in config.rb
+	// $path-only: if true, will cause only the path to be returned instead of a `url()` function
+	// $cache-buster: When set to `false` no cache buster will be used (i.e. `?313420982`)
+	background-color: $mygreen2;
+	background-image: $header-img;
+	background-position: 0 0;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+	@include background-size(cover);
+
+}
+
+#{headings()} {
+	font-family: $font-secondary;
+	font-weight: normal;
+	color: $darkgray;
+	@include text-shadow($paleryellow 1px 1px);
+}
+
+h1 {
+	font-size:2.2rem;
+	color: lighten($darkblue, 25);
+	margin-bottom: .4rem;
+	border-bottom: 1px solid $lightgray;
+	padding-top: 10px;
+}
+
+h2 {
+	font-size: 1.5rem;
+	line-height: 100%;
+	margin: 20px 0 0 0;
+	color: $orange;
+}
+
+a {
+	text-decoration: underline;
+	color: mediumgray;
+	&:hover {
+		color: $orange;
+	}
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+.small {
+	font-size: 1rem;
+	color: $blue;
+}
+
+

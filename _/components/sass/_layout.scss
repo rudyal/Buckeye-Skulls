@@ -1,0 +1,277 @@
+// Susy setup -----------------------------
+$total-columns			: 12;
+$column-width			: 4em;
+$gutter-width			: 1em;
+$grid-padding			: $gutter-width;
+$bg1-img: image-url('bg1.jpg', false, false);
+// $bgheader-img: image-url('clean_textile.png', false, false);
+// $bgheader-img: image-url('lightpaperfibers.png', false, false);
+// $bgheader-img: image-url('linedpaper.png', false, false);
+//$bgheader-img: image-url('subtle_grunge.png', false, false);
+$bgheader-img: image-url('tweed.png', false, false);
+// $bgheader-img: image-url('wall4.png', false, false);
+// $bgheader-img: image-url('white_wall.png', false, false);
+
+@include border-box-sizing;
+@include font-face("Nav Font", font-files("ADAM.CG PRO.otf"));
+
+
+// header ----------------------------------------------
+
+.layout {
+	@include container;
+	padding: 3%;
+
+
+}
+
+
+header {
+	img {
+		width: 95%;
+		max-width: 300px;
+		margin-bottom: 0;
+		margin-top: 4px;
+	}
+}
+
+// Navigation ----------------------------------
+
+.navigation {
+
+	
+
+	section.layout{
+		padding: .3em 1% .3em 1%;
+		@include breakpoint(mobileonly) {
+			padding: 3%;
+		}
+	}
+	//background: $lightgray;
+	height: 5.5em;
+	background-image: $bgheader-img;
+	box-shadow: 0 5px 7px rgba(0,0,0,0.55);
+	webkit-box-shadow: 0 5px 7px rgba(0,0,0,0.55);
+	//@include background-size(cover);
+	margin: 0px;
+	#togglemenu{
+		display: none;
+		
+	}
+	@include breakpoint(mobileonly) {
+		#togglemenu{
+			//text-indent: -9999px;
+			float: right;
+			display: block;
+			width: 70px;
+			height: 50px;
+			outline: 0;
+			background: white;
+			//background: #313567 url(images/togglemenu.png) center center no-repeat;
+			-moz-border-radius: 7px;
+			border-radius: 7px;
+			background-size: 70%;
+		}
+		min-width:380px;
+	}
+
+	@include breakpoint(phablet) {
+		#togglemenu{
+			//text-indent: -9999px;
+			float: right;
+			display: block;
+			width: 70px;
+			height: 50px;
+			outline: 0;
+			background: white;
+			//background: #313567 url(images/togglemenu.png) center center no-repeat;
+			-moz-border-radius: 7px;
+			border-radius: 7px;
+			background-size: 70%;
+		}
+	}
+	@include breakpoint(tablet) {
+		max-width: 1090px;
+		min-width: 1020px;
+	}
+	@include breakpoint(laptop) {
+		max-width: inherit;
+	}
+	@include breakpoint(desktop) {
+		max-width: inherit;
+	}
+
+	ul.nav {
+		float: right;
+		position: relative;
+		height: 5em;
+		margin-right: 5%;
+		@include breakpoint(mobileonly) {
+			height: inherit;
+			margin:0px;
+			clear: left;
+			width: 100%;
+			background: $lightgray;
+		}
+		@include breakpoint(phablet) {
+			float: right;
+			height: inherit;
+			margin:0px;
+			clear: left;
+			width: 100%;
+			background: $lightgray;
+		}
+		@include breakpoint(tablet) {
+			float: left;
+			
+		}
+		@include breakpoint(laptop) {
+			float: right;
+		}
+		li {
+			display: inline-block;
+			float: left;
+			padding: 29px 0;
+			@include breakpoint(mobileonly) {
+				display: block;
+				list-style: none;
+				float:none;
+			}
+			@include breakpoint(phablet) {
+				display: block;
+				list-style: none;
+				float:none;
+			}
+			@include breakpoint(desktop) {
+				display: inline-block;
+			}
+			i {
+				//color: lighten($yellow, 20);
+				color: $mygreen2;
+				padding-right: .5em;
+			}
+
+			a {
+				font-family: "Nav Font";
+				font-size: 22px;
+				text-transform: uppercase;
+				//display: block;
+				text-decoration: none;
+				padding: 0 20px;
+				border-left: 1px solid #BDBDBD;
+				color: lighten($lightgray, 80);
+				height: 33px;
+				@include breakpoint(mobileonly) {
+					font-size: 20px;
+				}
+				@include breakpoint(phablet) {
+					font-size: 20px;
+				}
+				@include breakpoint(tablet) {
+					font-size: 15px;
+				}
+				@include breakpoint(laptop) {
+					font-size: 18px;
+				}
+				@include breakpoint(desktop) {
+					font-size: 22px;
+				}
+			}
+			a.first{
+				border-left: none;
+			}
+			
+		}
+	}
+}
+
+#logo{
+	
+	float: left;
+	a {
+		padding: 0px;
+	}
+	padding: 0px;
+	width: 13em;
+	@include breakpoint(mobileonly) {
+		width:10em;
+	}
+	@include breakpoint(phablet) {
+		width:13em;
+	}
+	@include breakpoint(tablet) {
+		width:13em;
+	}
+	@include breakpoint(laptop) {
+		width:13em;
+	}
+	@include breakpoint(desktop) {
+		width:13em;
+	}
+}
+
+// .img-logo{
+// 	padding: 0px;
+// 	max-width: 100%;
+
+// }
+
+footer{
+	color: $paleyellow;
+	//background: light($darkblue, 3);
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 100px;
+}
+	//desktop, laptop, tablet, phablet, mobileonly
+	.primary {
+		@include span(30%);
+		margin-top: .2em;
+		.layout{
+			padding: 0px;
+			
+
+		}
+		margin-top:20px;
+		@include box-shadow(rgba(0,0,0,0.8) 5px 5px 15px);
+		
+		article{
+				display: inline-block;
+		}
+
+		@include breakpoint(mobileonly) {
+			@include span(90%);
+			float:right;
+
+		}
+		@include breakpoint(phablet) {
+			@include span(320px);
+			float:right;
+			background:red;
+		}
+		@include breakpoint(tablet) {
+			@include span(633px);
+			float:right;
+			background:black;
+		}
+		@include breakpoint(laptop) {
+			@include span(633px);
+			float:right;
+			background:blue;
+		}
+		@include breakpoint(desktop) {
+			@include span(633px);
+			float:right;
+			background:yellow;
+		}
+		#one {
+			background-image: $bg1-img;
+			font-family: ff-dagny-web-pro-1,ff-dagny-web-pro-2,sans-serif;
+			padding: 5px 5px 5px 5px;
+			
+		}
+		#two {
+			background-image: $bg1-img;
+			padding: 5px 5px 5px 5px;
+		}
+	}
