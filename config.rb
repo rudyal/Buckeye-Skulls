@@ -2,7 +2,8 @@ require "susy"
 require "breakpoint"
 css_dir = '_/css'
 sass_dir = '_/components/sass'
+images_dir = '_/images'
+fonts_dir = '_/fonts'
 javascripts_dir = '_/js'
-images_dir = 'C:/Users/D/Desktop/sassycompass/images'
-fonts_dir = 'C:/Users/D/Desktop/sassycompass/fonts'
 output_style = :compressed
+relative_assets = true
