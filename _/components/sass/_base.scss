@@ -3,10 +3,13 @@
 //$header-img: image-url('bear-w1600xh1067.jpg', false, false);
 //$header-img: image-url('bear-w1205xh805.jpg', false, false);
 $header-img: image-url('bear-w1205xh704.jpg', false, false);
+$header-img2: image-url('bear-w1205xh704b.jpg', false, false);
+$header-img3: image-url('bear-w1205xh704c.jpg', false, false);
 //$header-img: image-url('bear-w1000xh704.jpg', false, false);
 //desktop, laptop, tablet, phablet, mobileonly
 
 body {
+	
 	font-family: $font-primary;
 	font-size: 1.2rem;
 	line-height: 160%;
@@ -16,13 +19,30 @@ body {
 	// $path: path relative to images directory in config.rb
 	// $path-only: if true, will cause only the path to be returned instead of a `url()` function
 	// $cache-buster: When set to `false` no cache buster will be used (i.e. `?313420982`)
-	background-color: $mygreen2;
+	background-color: lighten($lightgray, 32);
 	background-image: $header-img;
 	background-position: 0 0;
   	background-repeat: no-repeat;
   	background-position: center center;
 	@include background-size(cover);
 
+}
+body.not-front{
+	font-family: $font-primary;
+	font-size: 1.2rem;
+	line-height: 160%;
+	//background: $paleyellow;
+	//color: $darkblue;
+	// image-url arguments:
+	// $path: path relative to images directory in config.rb
+	// $path-only: if true, will cause only the path to be returned instead of a `url()` function
+	// $cache-buster: When set to `false` no cache buster will be used (i.e. `?313420982`)
+	background-color: lighten($lightgray, 32);
+	background-image: $header-img2;
+	background-position: 0 0;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+	@include background-size(cover);
 }
 
 #{headings()} {
