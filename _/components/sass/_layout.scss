@@ -241,7 +241,20 @@ header {
 				ul#sub-nav{
 					opacity: 1;
     				height: auto;
+    				a{
+						color:white;
+					}
+					li.subli:hover{
+						a{
+							color:#C0C0C0;
+						}
+					}
 				}
+				
+			a{
+				color:#C0C0C0;
+			}
+			
 		}
 
 	}
@@ -302,6 +315,7 @@ footer{
 		// @include box-shadow(rgba(0,0,0,0.8) 5px 5px 15px);
 		
 		article{
+
 				display: inline-block;
 				z-index: 199;
 				h2{
@@ -335,10 +349,15 @@ footer{
 		}
 		#three{
 			vertical-align:top;
-			background-image: $bg1-img;
+			background-color: #909090;
 			padding: 5px 5px 31px 5px;
 			margin: 5px 5px 5px 5px;
 			width: 100%;
+			font-family: "Nav Font";
+			text-decoration: none;
+			text-shadow: none;
+			color: white;
+			font-size: 13px;
 			@include breakpoint(mobileonly) {
 			width: 100%;
 			}
@@ -355,15 +374,29 @@ footer{
 			width: inherit;
 			}
 			li{
-				padding: 13px 9px 15px 10px;
+				padding: 13px 13px 10px 10px;
 				font-size: 20.4px;
 			}
 		}
 		#one {
-			background-image: $bg1-img;
-			padding: 5px 5px 5px 5px;
+			//background-image: $bg1-img;
+			background-color: #909090;
+			padding: 15px 15px 10px 15px;
 			margin: 5px 5px 5px 5px;
 			width: 100%;
+			h3{
+				background-image: image-url('stripe.png', false, false);
+				@include background-size(cover);
+				 font-size: 16px;
+				// font-size: .9em;
+				padding: 5px 5px 5px 15px;
+				a{
+					font-family: "Nav Font";
+					text-decoration: none;
+					text-shadow: none;
+					color: white;
+				}
+			}
 			@include breakpoint(mobileonly) {
 			width: 100%;
 			}
@@ -380,6 +413,12 @@ footer{
 			width: inherit;
 			}
 			
+		}
+		#one:hover{
+			background-color: #484848; 
+		}
+		#three:hover{
+			background-color: #484848; 
 		}
 	}
 
@@ -1186,6 +1225,16 @@ footer{
 
 
 
+
+////////////////////// about page
+
+
+
+
+
+
+
+
 #about-page{
 	h2{
 		font-size: 29px !important;
@@ -1199,6 +1248,8 @@ footer{
 	}
 	#about-con{
 		padding-left: 5%;
+		padding-top: 30px;
+		padding-right:5%;
 		.about-text{
 			width: 49%;
 			display: inline-block;
@@ -1218,20 +1269,58 @@ footer{
 				padding-left:4%;
 				padding-top:15px;
 		}
+		#a1{
+			padding-top:0;
+			margin-top:0;
+
+			h2{
+				margin-top:0;
+			}
+		}
 
 		#a2{
-			padding-left:10%;
-			padding-top: 50px;
+
+			background-color:#484848;
+			color: white;
+			padding-left:4%;
+			padding-right:4%;
+			padding-bottom:20px;
+			span{
+				padding-left: 7%;
+				color: $mygreen2;
+			}
 		}
 
 		#a3{
-			padding-top: 50px;
+			margin-top: 35px;
+			padding-left:4%;
+			padding-right:4%;
+			padding-bottom:20px;
+			padding-top: 15px;
+			background-color:#484848;
+			color: white;
 		}
 
 		#a4{
 			padding-left:10%;
+			.img-ov{
+				padding-left:4%;
+				padding-top:15px;
+			}
 		}
-		
+		#a5{
+			margin-top: 35px;
+			padding-left:4%;
+			padding-right:4%;
+			padding-bottom:20px;
+			padding-top: 15px;
+			background-color:#484848;
+			color: white;
+			span{
+				padding-left: 7%;
+				color: $mygreen2;
+			}
+		}
 	}
 	
 }
