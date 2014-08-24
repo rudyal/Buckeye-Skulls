@@ -1272,6 +1272,7 @@ footer{
 		#a1{
 			padding-top:0;
 			margin-top:0;
+			@include background-size(cover);
 
 			h2{
 				margin-top:0;
